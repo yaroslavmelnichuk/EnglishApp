@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="actionbar_background">#2196F3</color>
+    <color name="dark_primary">#1976D2</color>
+    <color name="text_icon">#FFFFFF</color>
+    <color name="text_secondary">#727272</color>
+    <color name="text_primary">#212121</color>
+    <color name="divider_color">#B6B6B6</color>
+
+    <color name="future_simple">#ff88ff</color>
+    <color name="present_continuous">#ffa500</color>
+    <color name="present_perfect">#33ff00</color>
+    <color name="past_simple">#ff7552</color>
+    <color name="dynamics">#D5ECF1</color>
+
+</resources>

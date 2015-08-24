@@ -1,0 +1,108 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="00:00"
+                android:id="@+id/tvTimer"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="130dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffe6ffbf">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:id="@+id/ivNounLeft"
+                    android:src="@drawable/she" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="75dp"
+                    android:id="@+id/ivSubjectLeft"
+                    android:src="@drawable/pie" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="110dp"
+                    android:id="@+id/ivVerb"
+                    android:src="@drawable/bake"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="30dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:id="@+id/ivNounRight"
+                    android:src="@drawable/they" />
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="75dp"
+                    android:id="@+id/ivSubjectRight"
+                    android:src="@drawable/pizza" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/tableHolder"
+            android:layout_marginTop="20dp">
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/table">
+
+            </TableLayout>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start"
+                android:id="@+id/btnNext"
+                android:layout_gravity="center_horizontal"
+                android:background="#f27935"
+                android:layout_marginTop="10dp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

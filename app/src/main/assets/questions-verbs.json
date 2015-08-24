@@ -1,0 +1,124 @@
+{
+  "questions": [
+    {
+      "key":"send",
+      "blue":"send",
+      "red":"sending",
+      "green":"sent",
+      "yellow":"sent",
+      "text":"Оленка відправить цей лист завтра."
+    },
+    {
+      "key": "help",
+      "blue": "help",
+      "red": "helping",
+      "green": "helped",
+      "yellow": "helped",
+      "text":"Він допоможе нам організувати виставку"
+    },
+    {
+      "key": "buy",
+      "blue": "buy",
+      "red": "buying",
+      "green": "bought",
+      "yellow": "bought",
+      "text":"Я куплю квартиру."
+    },
+    {
+      "key": "writing",
+      "blue": "write",
+      "red": "wrote",
+      "green": "written",
+      "yellow": "writing",
+      "text":"Учні все ще пишуть диктант."
+    },
+    {
+      "key": "speaking",
+      "blue": "speak",
+      "red": "spoke",
+      "green": "spoken",
+      "yellow": "speaking",
+      "text":"Вони все ще говорять про фільм."
+    },
+    {
+      "key": "painting",
+      "blue": "paint",
+      "red": "painted",
+      "green": "painted",
+      "yellow": "painting",
+      "text":"Зараз вона малює в сусідній кімнаті."
+    },
+    {
+      "key": "eating",
+      "blue": "eat",
+      "red": "eaten",
+      "green": "ate",
+      "yellow": "eating",
+      "text":"Поглянь! Цей хлопчик їсть морозиво!"
+    },
+    {
+      "key": "washed",
+      "blue": "wash",
+      "red": "washed",
+      "green": "washed",
+      "yellow": "washing",
+      "text":"Світланка помила посуд."//GREEN KEY
+    },
+    {
+      "key": "read",
+      "blue": "read",
+      "red": "read",
+      "green": "read",
+      "yellow": "reading",
+      "text":"Батька прочитав цю газету."
+    },
+    {
+      "key": "bought",
+      "blue": "buy",
+      "red": "bought",
+      "green": "bought",
+      "yellow": "buying",
+      "text":"Діти купили морозиво."
+    },
+    {
+      "key": "drunk",
+      "blue": "drink",
+      "red": "drank",
+      "green": "drunk",
+      "yellow": "drinking",
+      "text":"Я уже випив каву."
+    },
+    {
+      "key": "cleaned",
+      "blue": "clean",
+      "red": "cleaned",
+      "green": "cleaned",
+      "yellow": "cleaning",
+      "text":"Я прибирала в кімнаті."//RED
+    },
+    {
+      "key": "cooked",
+      "blue": "cook",
+      "red": "cooked",
+      "green": "cooked",
+      "yellow": "cooking",
+      "text":"Вона готувала сніданок."
+    },
+    {
+      "key": "opened",
+      "blue": "open",
+      "red": "opened",
+      "green": "opened",
+      "yellow": "opening",
+      "text":"Він відкривав книгу (а зараз вона закрита)"
+    },
+    {
+      "key": "closed",
+      "blue": "close",
+      "red": "closed",
+      "green": "closed",
+      "yellow": "closing",
+      "text":"Оленка закривала двері."
+    }
+  ]
+}

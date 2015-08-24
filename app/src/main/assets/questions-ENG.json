@@ -1,0 +1,116 @@
+{
+  "questions": [
+    {
+      "key":"Blue",
+      "blue":"Blue",
+      "red":"Red",
+      "green":"Green",
+      "yellow":"Yellow",
+      "text": "My sister gets up at eight o'clock."
+    },
+    {
+      "key": "Blue",
+      "blue": "Blue",
+      "red": "Red",
+      "green": "Green",
+      "yellow": "Yellow",
+      "text": "She goes to school in the afternoon."
+    },
+    {
+      "key": "Blue",
+      "blue": "Blue",
+      "red": "Red",
+      "green": "Green",
+      "yellow": "Yellow",
+      "text":"She does her morning exercises every day."
+    },
+    {
+      "key": "Blue",
+      "blue": "Blue",
+      "red": "Red",
+      "green": "Green",
+      "yellow": "Yellow",
+      "text":"She speaks French well."
+    },
+    {
+      "key": "Green",
+      "blue": "Blue",
+      "red": "Red",
+      "green": "Green",
+      "yellow": "Yellow",
+      "text": "I have studied French."
+    },
+    {
+      "key": "Green",
+      "blue": "Blue",
+      "red": "Red",
+      "green": "Green",
+      "yellow": "Yellow",
+      "text":"They've gone to Scotland."
+    },
+    {
+      "key": "Green",
+      "blue": "Blue",
+      "red": "Red",
+      "green": "Green",
+      "yellow": "Yellow",
+      "text":   "He has drunk too much coffee."
+    },
+    {
+      "key": "Green",
+      "blue": "Blue",
+      "red": "Red",
+      "green": "Green",
+      "yellow": "Yellow",
+      "text":"She has passed the exam."
+    },
+    {
+      "key": "Red",
+      "blue": "Blue",
+      "red": "Red",
+      "green": "Green",
+      "yellow": "Yellow",
+      "text":"We bought a new car last weekend."
+    },
+    {
+      "key": "Red",
+      "blue": "Blue",
+      "red": "Red",
+      "green": "Green",
+      "yellow": "Yellow",
+      "text":"I forgot to buy some milk."
+    },
+    {
+      "key": "Red",
+      "blue": "Blue",
+      "red": "Red",
+      "green": "Green",
+      "yellow": "Yellow",
+      "text":"I came to England in 1993."//RED
+    },
+    {
+      "key": "Yellow",
+      "blue": "Blue",
+      "red": "Red",
+      "green": "Green",
+      "yellow": "Yellow",
+      "text": "I'm working at the moment."
+    },
+    {
+      "key": "Yellow",
+      "blue": "Blue",
+      "red": "Red",
+      "green": "Green",
+      "yellow": "Yellow",
+      "text": "We are eating dinner now."
+    },
+    {
+      "key": "Yellow",
+      "blue": "Blue",
+      "red": "Red",
+      "green": "Green",
+      "yellow": "Yellow",
+      "text": "We are eating dinner now."
+    }
+  ]
+}
