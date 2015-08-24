@@ -160,14 +160,12 @@ public class LessonController {
            }
        }
        else {
-           for (int i = 0; i < 8; i++) {
-               View itemView = LayoutInflater.from(context).inflate(R.layout.row, null, false);
-               TableRow view = (TableRow) itemView;
-               view.setBackgroundColor(context.getResources().getColor(Config.APP_COLORS[LESSON_TYPE]));
-               TextView tv = (TextView) view.getChildAt(0);
-               tv.setText(Config.TRAINER_ABBR[LESSON_TYPE]);
-               // add it to Layout
-               tableLayout.addView(itemView);
+           for (int i = 0; i < 9; i++) {
+               TableRow row = (TableRow)tableLayout.getChildAt(i);
+               for(int j = 1; j < 3; j++ ){
+                   row.getChildAt(j).setBackgroundColor(context.getResources().getColor(Config.APP_COLORS[LESSON_TYPE]));
+               }
+
            }
        }
     }
