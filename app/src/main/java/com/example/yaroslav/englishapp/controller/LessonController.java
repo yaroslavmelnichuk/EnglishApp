@@ -160,7 +160,7 @@ public class LessonController {
            }
        }
        else {
-           for (int i = 0; i < 9; i++) {
+           for (int i = 1; i < 9; i++) {
                TableRow row = (TableRow)tableLayout.getChildAt(i);
                for(int j = 1; j < 3; j++ ){
                    row.getChildAt(j).setBackgroundColor(context.getResources().getColor(Config.APP_COLORS[LESSON_TYPE]));

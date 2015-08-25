@@ -15,21 +15,20 @@ public  class ScoreManager {
         context = cntx;
         db = new DB(context);
     }
-static ArrayList<Score> getAllScores(){
+public  ArrayList<String> getAllTimes(){
     db.open();
-    ArrayList<Score> data = new ArrayList<>();
+    ArrayList<String> data = new ArrayList<>();
     Cursor cursor = db.getAllData();
     while (cursor.moveToNext()){
-        String author = cursor.getString(cursor.getColumnIndex(db.COLUMN_AUTHOR));
         String time = cursor.getString(cursor.getColumnIndex(db.COLUMN_TIME));
-        data.add(new Score(author, time));
+        data.add(time);
     }
     db.close();
     return data;
 }
-    void addScore(Score value){
+    public void addScore(Score value){
         db.open();
-        db.addHScore(value.author, value.time);
+        db.addHScore(value.time);
         db.close();
     }
 }

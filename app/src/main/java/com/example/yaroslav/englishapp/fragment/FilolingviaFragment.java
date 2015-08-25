@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.app.Fragment;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,7 +16,9 @@ import android.widget.TextView;
 
 import com.example.yaroslav.englishapp.MyTimer;
 import com.example.yaroslav.englishapp.R;
+import com.example.yaroslav.englishapp.activity.HightScoreActivity;
 import com.example.yaroslav.englishapp.controller.LessonController;
+import com.example.yaroslav.englishapp.score.Score;
 import com.example.yaroslav.englishapp.score.ScoreManager;
 
 /**
@@ -58,6 +61,8 @@ public class FilolingviaFragment extends Fragment implements View.OnClickListene
         btnNext = (Button) rootView.findViewById(R.id.btnNext);
         btnNext.setOnClickListener(this);
 
+        scoreManager = new ScoreManager(context);
+
         getActivity().setTitle(lessonName);
         lessonController = new LessonController(LESSON_TYPE,tableLayout,context);
         lessonController.attachViews(ivNoun1, ivNoun2, ivObject1, ivObject2, ivVerb);
@@ -82,6 +87,9 @@ public class FilolingviaFragment extends Fragment implements View.OnClickListene
             }
             if(lessonController.isLastItem()){
            showEndDialog();
+           myTimer.resetTimer();
+             isStartPressed = false;
+             btnNext.setText("Start");
             }
             else
             lessonController.toNext();
@@ -114,20 +122,23 @@ public class FilolingviaFragment extends Fragment implements View.OnClickListene
     }
 
 void showEndDialog(){
+    final String timeText = tvTime.getText().toString();
     myTimer.stopTimer();
-    builder.setMessage("Test");
+    builder.setMessage(timeText);
     builder.setTitle("Your Time!");
     builder.setPositiveButton("High Scores", new DialogInterface.OnClickListener() {
         public void onClick(DialogInterface dialog, int id) {
             // User clicked OK button
-            //  Intent intent = new Intent(LessonActivity.this, MainActivity.class);
-            //startActivity(intent);
-            //  restartTest();
+            scoreManager.addScore(new Score(timeText));
+              Intent intent = new Intent(context, HightScoreActivity.class);
+            startActivity(intent);
+
         }
     });
     builder.setNegativeButton("Repeat", new DialogInterface.OnClickListener() {
         public void onClick(DialogInterface dialog, int id) {
             // User cancelled the dialog
+            scoreManager.addScore(new Score(timeText));
             lessonController.restartTest();
         }
     });

@@ -24,8 +24,9 @@
 
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
-    <string name="action_websearch">Web search</string>
+    <string name="action_websearch">Демо</string>
     <string name="app_not_available">Sorry, there\'s no web browser available</string>
     <string name="title_activity_lingvomap_test">LingvomapTestActivity</string>
     <string name="error_player">Error</string>
+    <string name="title_activity_hight_score">HightScoreActivity</string>
 </resources>

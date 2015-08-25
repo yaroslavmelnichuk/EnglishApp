@@ -13,6 +13,7 @@ public class StartMenuActivity extends Activity implements View.OnClickListener 
     Button btnWebSite;
     Button btnLingvo;
     Button btnFilolingvia;
+    Button btnHelp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +28,9 @@ public class StartMenuActivity extends Activity implements View.OnClickListener 
 
         btnFilolingvia = (Button) findViewById(R.id.btnFilolingvia);
         btnFilolingvia.setOnClickListener(this);
+
+        btnHelp = (Button) findViewById(R.id.btnHelp);
+        btnHelp.setOnClickListener(this);
     }
 
     @Override
@@ -47,6 +51,10 @@ public class StartMenuActivity extends Activity implements View.OnClickListener 
                 intent2.putExtra("TEST_TYPE",2);
                 startActivity(intent2);
                 break;
+            case R.id.btnHelp:
+                Uri youtubeAddress = Uri.parse("https://www.youtube.com/user/englishstar777/videos");
+                Intent chanel = new Intent(Intent.ACTION_VIEW, youtubeAddress);
+                startActivity(chanel);
         }
     }
 }

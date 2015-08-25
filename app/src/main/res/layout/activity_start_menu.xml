@@ -48,7 +48,8 @@
                 android:drawableTop="@drawable/support"
                 android:textColor="@color/text_secondary"
                 android:layout_weight="0.5"
-                android:background="#00b0ceff" />
+                android:background="#00b0ceff"
+                android:id="@+id/btnHelp" />
 
             <Button
                 android:layout_width="wrap_content"

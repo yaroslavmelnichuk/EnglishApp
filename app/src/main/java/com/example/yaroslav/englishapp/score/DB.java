@@ -16,12 +16,10 @@ import java.util.ArrayList;
     private static final int DB_VERSION = 1;
     public static final String DB_TABLE_SCORES = "highscore";
     public static final String COLUMN_ID = "_id";
-    public static final String COLUMN_AUTHOR = "author";
     public static final String COLUMN_TIME = "time";
     private static final String DB_CREATE_SCORES =
             "create table " + DB_TABLE_SCORES + "(" +
                     COLUMN_ID + " integer primary key autoincrement, " +
-                    COLUMN_AUTHOR + " text, " +
                     COLUMN_TIME + " text" +
                     ");";
     private final Context mCtx;
@@ -61,9 +59,8 @@ import java.util.ArrayList;
         }
         return tmp;
     }
-    public void addHScore(String author, String time) {
+    public void addHScore(String time) {
         ContentValues cv = new ContentValues();
-        cv.put(COLUMN_AUTHOR, author);
         cv.put(COLUMN_TIME, time);
         mDB.insert(DB_TABLE_SCORES, null, cv);
     }

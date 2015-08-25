@@ -45,7 +45,7 @@ public class MyTimer {
         timeSwapBuff += timeInMilliseconds;
         handler.removeCallbacks(updateTimer);
     }
-    void resetTimer(){
+    public void resetTimer(){
         starttime = 0L;
         timeInMilliseconds = 0L;
         timeSwapBuff = 0L;

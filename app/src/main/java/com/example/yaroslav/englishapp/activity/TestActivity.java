@@ -2,7 +2,6 @@ package com.example.yaroslav.englishapp.activity;
 
 import android.app.Fragment;
 import android.app.FragmentManager;
-import android.app.SearchManager;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -15,12 +14,13 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
+import com.example.yaroslav.englishapp.DeveloperKey;
 import com.example.yaroslav.englishapp.R;
 import com.example.yaroslav.englishapp.fragment.FilolingviaFragment;
 import com.example.yaroslav.englishapp.fragment.LingvoTestFragment;
 import com.google.android.youtube.player.YouTubeBaseActivity;
+import com.google.android.youtube.player.YouTubeStandalonePlayer;
 
 public class TestActivity extends YouTubeBaseActivity {
     private DrawerLayout mDrawerLayout;
@@ -31,6 +31,8 @@ public class TestActivity extends YouTubeBaseActivity {
     private CharSequence mTitle;
     private String[] mLessonTitles;
     private String openedCategory;
+    private String PLAY_LIST_ID;
+    private Intent demoIntent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -112,14 +114,18 @@ public class TestActivity extends YouTubeBaseActivity {
         switch (item.getItemId()) {
             case R.id.action_websearch:
                 // create intent to perform web search for this planet
-                Intent intent = new Intent(Intent.ACTION_WEB_SEARCH);
-                intent.putExtra(SearchManager.QUERY, getActionBar().getTitle());
-                // catch event that there's no activity to handle intent
-                if (intent.resolveActivity(getPackageManager()) != null) {
-                    startActivity(intent);
-                } else {
-                    Toast.makeText(this, R.string.app_not_available, Toast.LENGTH_LONG).show();
-                }
+              if(LESSON_TYPE == 1){
+                  PLAY_LIST_ID = "MoHet6GSRUM";
+                  demoIntent = YouTubeStandalonePlayer.createPlaylistIntent(this, DeveloperKey.DEVELOPER_KEY,
+                          PLAY_LIST_ID, 0,0,false, false);
+                  startActivity(demoIntent);
+
+              }else {
+                  PLAY_LIST_ID = "PLiY5YQfYGiwk-5rqGHnFz-EuX26_rMnxv";
+                  demoIntent = YouTubeStandalonePlayer.createPlaylistIntent(this, DeveloperKey.DEVELOPER_KEY,
+                          PLAY_LIST_ID, 0,0,false, false);
+                  startActivity(demoIntent);
+              }
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
