@@ -4,6 +4,8 @@ import android.content.Context;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.yaroslav.englishapp.lingvomapanswers.AnswersCounter;
 import com.example.yaroslav.englishapp.model.Question;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -25,7 +27,7 @@ public class QuestionsController {
     private int currentIndex = 0;
     private int countOfQuestions;
     public String KEY;
-
+    public AnswersCounter counter;
     private Button btnBlue;
     private Button btnRed;
     private Button btnGreen;
@@ -44,6 +46,8 @@ public class QuestionsController {
         random = new Random();
         currentQuestion = data.get(prevIndex);
         KEY = currentQuestion.key;
+
+        counter = new AnswersCounter();
     }
 
     public void attachViews(TextView tvText, TextView tvStatus, Button... buttons){
@@ -110,6 +114,7 @@ public class QuestionsController {
     }
 
     public void toNextQuestion(){
+        counter.CURRENT_QUESTION++;
         currentIndex = random.nextInt(countOfQuestions);
         if(currentIndex == prevIndex) {
             currentIndex = random.nextInt(countOfQuestions);
@@ -131,9 +136,15 @@ public class QuestionsController {
     public void  checkAnswer(String text){
         if(currentQuestion.key.equals(text)){
             questionStatus.setText("Well done!");
+            counter.PASSED_QUESTIONS++;
         }
         else {
             questionStatus.setText("Wrong!");
+            counter.NOT_PASSED_QUESTIONS++;
         }
+    }
+
+    public boolean isEndOfTest(){
+       return counter.CURRENT_QUESTION >= 5;
     }
 }
