@@ -3,10 +3,10 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="web_site">Сайт</string>
-    <string name="lingvo_map">Лингво карта</string>
-    <string name="filolingvia">Филолингвия</string>
-    <string name="study_help">Помощь</string>
+    <string name="web_site">Підтримка</string>
+    <string name="lingvo_map">Лингвомапа</string>
+    <string name="filolingvia">Тренажери</string>
+    <string name="study_help">Поради</string>
 
     <string-array name="Lingvomap_lessons">
         <item>Lesson 1</item>
